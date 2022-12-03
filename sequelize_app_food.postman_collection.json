@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "1c897e53-b4f9-4d97-aefb-da06b9d17008",
+		"name": "sequelize_app_food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17668115"
+	},
+	"item": [
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "thêm like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 1,\r\n    \"res_id\"  : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/like",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy danh sách like theo nhà hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/getlikeres/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"getlikeres",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy danh sách like theo user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/getlikeuser/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"getlikeuser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rate_res",
+			"item": [
+				{
+					"name": "thêm rate_res",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 7,\r\n    \"res_id\"  : 1,\r\n    \"amount\"   : 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/postrate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"postrate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy danh sách danh gia theo nhà hàng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/getrateres/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"getrateres",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy danh sách đánh giá theo user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/getrateuser/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"getrateuser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "thêm order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 6,\r\n    \"food_id\" : 5,\r\n    \"amount\"  : 1,\r\n    \"code\"    : \"chào mọi người\",\r\n    \"arr_sub_id\" : \"[1,2]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/order",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
